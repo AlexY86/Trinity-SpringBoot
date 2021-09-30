@@ -18,7 +18,7 @@ public class OrdersController {
 	@Autowired OrdersRepository ordersRepository;
 
 	@GetMapping("/allOrders")
-  	public Iterable<orders> getAllUsers() {
+  	public Iterable<orders> getAllOrders() {
     return ordersRepository.findAll();
 }
 
