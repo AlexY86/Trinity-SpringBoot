@@ -1,0 +1,18 @@
+{
+    "lineItems": [
+      {
+        "number": "1",
+        "orderId": 6,
+        "name": "Widget",
+        "price": 20.00,
+        "quantity": 1
+      },
+      {
+        "number": "2",
+        "orderId": 6,
+        "name": "Widget",
+        "price": 35.00,
+        "quantity": 2
+      }
+    ]
+  }

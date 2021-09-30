@@ -1,0 +1,32 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-OrdersApplication<tli-orders-application>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.tli.orders.OrdersApplication",
+            "projectName": "tli-orders-application",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MavenWrapperDownloader",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "MavenWrapperDownloader",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-ApiexpApplication",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "apiexample.apiexp.ApiexpApplication",
+            "args": ""
+        }
+    ]
+}
