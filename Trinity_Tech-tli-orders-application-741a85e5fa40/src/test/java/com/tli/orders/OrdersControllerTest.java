@@ -7,6 +7,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.tli.orders.controller.OrdersController;
+import com.tli.orders.model.Order;
+import com.tli.orders.repository.OrdersRepository;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.platform.commons.annotation.Testable;
@@ -16,7 +19,6 @@ import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.json.JacksonTester;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
@@ -35,11 +37,11 @@ public class OrdersControllerTest {
 
 	private MockMvc mockMvc;
 
-	private JacksonTester<List<orders>> ordersListJson;
-	private JacksonTester<orders> ordersJson;
+	private JacksonTester<List<Order>> ordersListJson;
+	private JacksonTester<Order> ordersJson;
 
-	orders orders;
-	List<orders> ordersList;
+	Order orders;
+	List<Order> ordersList;
 
 	@BeforeAll
 	public void setup() {
@@ -49,7 +51,7 @@ public class OrdersControllerTest {
 		mockMvc = MockMvcBuilders.standaloneSetup(ordersController).build();
 
 		ordersList = new ArrayList<>();
-		orders = new orders();
+		orders = new Order();
 		orders.setId(1);
 		orders.setName("alex");
 		ordersList.add(orders);
