@@ -70,15 +70,4 @@ public class OrdersController {
 		return response;
 	}
 
-	@DeleteMapping("/orders/{id}/deleteItem/name")
-	public Map<String, Boolean> deleteItem(@PathVariable(value = "id") String name, Long id) throws ResourceNotFoundException {
-		Order orders = ordersRepository.findById(id)
-				.orElseThrow(() -> new ResourceNotFoundException("Employee not found for this name :: " + name));
-
-		ordersRepository.delete(orders);
-		Map<String, Boolean> response = new HashMap<>();
-		response.put("deleted", Boolean.TRUE);
-		return response;
-	}
-
 }
